@@ -27,8 +27,5 @@ jobs:
       - name: Instalar dependencias
         run: npm install
 
-      - name: Ejecutar sqlite3
-        run: npm install sqlite3
-
       - name: Ejecutar pruebas
         run: npm test

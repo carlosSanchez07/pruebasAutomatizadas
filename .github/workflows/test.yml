@@ -24,7 +24,6 @@ jobs:
       - name: Grant permissions to jest
         run: chmod +x ./node_modules/.bin/jest
 
-
       - name: Instalar dependencias
         run: npm install
 

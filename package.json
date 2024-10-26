@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.21.1",
     "sqlite3": "^5.1.7"
@@ -22,15 +22,14 @@
     "supertest": "^7.0.0"
   },
   "husky": {
-  "hooks": {
-    "pre-commit": "lint-staged"
-  }
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
-  "*.js": [
-    "npm test -- --findRelatedTests",
-    "git add"
-  ]
-} 
-
+    "*.js": [
+      "npm test -- --findRelatedTests",
+      "git add"
+    ]
+  }
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
-const sqlite3 = require('sqlite3').verbose();
+const Database = require('better-sqlite3');
 const app = express();
 const PORT = 3000;
 
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());  // Permitir todas las solicitudes desde cualquier origen
 
 // Configurar la base de datos SQLite
-const db = new sqlite3.Database('./users.db', (err) => {
+const db = new Database('./users.db', (err) => {
   if (err) {
     console.error("Error al conectar con la base de datos:", err.message);
   } else if (process.env.NODE_ENV !== 'test') {

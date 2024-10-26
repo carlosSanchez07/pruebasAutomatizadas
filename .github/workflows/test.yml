@@ -1,0 +1,30 @@
+name: Ejecutar Pruebas Automáticas
+
+on:
+  push:
+    branches:
+      - main  # Especifica en qué ramas ejecutar las pruebas. Puedes cambiar "main" por la rama que prefieras.
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install
+
+      - name: Ejecutar pruebas
+        env:
+          NODE_ENV: test  # Asegúrate de que las pruebas se ejecuten en modo de prueba
+        run: npm test

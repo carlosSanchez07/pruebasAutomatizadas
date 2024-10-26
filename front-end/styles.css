@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 22px); /* Ajustar el ancho para incluir padding */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #28a745; /* Cambiar color al hacer foco */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5); /* Sombra al hacer foco */
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 12px; /* Tamaño de botón más pequeño */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px; /* Tamaño de fuente del botón */
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838; /* Color de botón al pasar el mouse */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px; /* Padding de celdas */
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333; /* Color del texto del encabezado */
+    font-weight: bold;
+}

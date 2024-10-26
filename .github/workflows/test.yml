@@ -3,10 +3,10 @@ name: Ejecutar Pruebas Automáticas
 on:
   push:
     branches:
-      - main  # Especifica en qué ramas ejecutar las pruebas. Puedes cambiar "main" por la rama que prefieras.
+      - master  # Especifica en qué ramas ejecutar las pruebas. Puedes cambiar "main" por la rama que prefieras.
   pull_request:
     branches:
-      - main
+      - master
 #Comentario para probar
 jobs:
   test:

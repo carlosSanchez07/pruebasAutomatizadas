@@ -21,15 +21,8 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Configure npm permissions
-        run: |
-          npm config set user 0
-          npm config set unsafe-perm true
-
       - name: Instalar dependencias
         run: npm install
 
       - name: Ejecutar pruebas
-        env:
-          NODE_ENV: test  # Asegúrate de que las pruebas se ejecuten en modo de prueba
         run: npm test
